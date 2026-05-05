@@ -1,0 +1,14 @@
+# httpd-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd-pod
+  labels:
+    app: web-server
+    type: apache
+spec:
+  containers:
+  - name: httpd-container
+    image: httpd:latest
+    ports:
+    - containerPort: 80
